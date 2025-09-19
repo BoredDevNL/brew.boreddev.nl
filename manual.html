@@ -12,6 +12,12 @@
             <h1>BrewKernel User Manual</h1>
         </div>
 
+        <div class="warning-box">
+            IMPORTANT: Running this kernel on real hardware is at YOUR OWN RISK.
+            This software comes with ABSOLUTELY NO WARRANTY.
+            The developer is not liable for any damage to your system.
+        </div>
+
         <div class="section">
             <h2>System Overview</h2>
             <p>Welcome to the BrewKernel, a simple hobby operating system kernel designed
@@ -22,6 +28,97 @@
             initializes a custom color palette and provides basic keyboard input
             handling. The primary user interface is a simple command-line
             interface (CLI).</p>
+
+            <div class="tech-box">
+                <h3>Hardware Requirements</h3>
+                <dl class="hardware-list">
+                    <dt>Tested Configuration:</dt>
+                    <dd>HP EliteDesk 705 G4 DM 65W SBKPF</dd>
+                    <dt>CPU:</dt>
+                    <dd>AMD Ryzen 5 PRO 2400G (8) @ 3.600GHz</dd>
+                    <dt>GPU:</dt>
+                    <dd>AMD ATI Radeon Vega Series (VGA ONLY)</dd>
+                    <dt>Display:</dt>
+                    <dd>VGA port required - No other display outputs are supported</dd>
+                    <dt>Boot:</dt>
+                    <dd>Legacy boot mode required (NOT UEFI)</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Building from Source</h2>
+            <div class="tech-box">
+                <h3>Prerequisites</h3>
+                <p>Docker is required for building the kernel in a consistent environment.</p>
+                
+                <h3>Build Steps</h3>
+                <div class="code-block">
+# Build the Docker container
+cd BrewKernel
+docker build buildenv -t brewkernel
+
+# Run the build script
+docker run --rm -it -v "$(pwd)":/root/env -w /root/env --platform linux/amd64 brewkernel make build-x86_64</div>
+                
+                <p>Build outputs:</p>
+                <ul>
+                    <li>dist/x86_64/kernel.bin - Kernel binary</li>
+                    <li>dist/x86_64/kernel.iso - Bootable ISO image</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Installation on Real Hardware</h2>
+            <div class="tech-box">
+                <h3>Steps to Install</h3>
+                <ol>
+                    <li>Install BalenaEtcher on your device</li>
+                    <li>Use BalenaEtcher to flash kernel.iso to a USB drive</li>
+                    <li>Ensure you have a compatible x86_64 system</li>
+                    <li>Enable legacy boot in BIOS</li>
+                    <li>Boot from USB using legacy boot option (NOT UEFI)</li>
+                    <li>Connect display via VGA port only</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technical Details</h2>
+            <div class="tech-box">
+                <h3>Memory Map</h3>
+                <div class="memory-map">
+Kernel Load Address: 0x100000 (1MB)
+Stack Size: 16KB
+Page Tables: Identity Mapping
+VGA Buffer: 0xB8000</div>
+
+                <h3>VGA Text Mode</h3>
+                <ul>
+                    <li>Resolution: 80x25 characters</li>
+                    <li>16-color palette with RGB customization</li>
+                    <li>Hardware cursor support</li>
+                    <li>Automatic screen scrolling</li>
+                    <li>Text wrapping at screen boundaries</li>
+                </ul>
+
+                <h3>Text Input & Display</h3>
+                <ul>
+                    <li>256-character input buffer</li>
+                    <li>Backspace handling with cursor movement</li>
+                    <li>Case-insensitive commands</li>
+                    <li>Color attributes for text and background</li>
+                </ul>
+
+                <h3>Real-Time Clock & Timezone Support</h3>
+                <ul>
+                    <li>RTC driver with BCD conversion</li>
+                    <li>Global timezone database</li>
+                    <li>Support for half-hour offsets</li>
+                    <li>System uptime tracking</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">

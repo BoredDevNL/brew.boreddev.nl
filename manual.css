@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     color: #000080;
+    line-height: 1.4;
 }
 
 .container {
@@ -128,6 +129,84 @@ a:hover {
     background-color: #FFFF00;
 }
 
+/* Technical sections */
+.tech-box {
+    background: #000080;
+    color: #FFFFFF;
+    padding: 10px;
+    margin: 15px 0;
+    border: 2px solid #FFFFFF;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.tech-box ul {
+    color: #FFFFFF;
+    list-style-type: square;
+}
+
+.tech-box h3 {
+    color: #FFFF00;
+    margin-top: 0;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 5px;
+}
+
+.tech-box pre {
+    background: #000000;
+    padding: 10px;
+    overflow-x: auto;
+    color: #00FF00;
+    border: 1px solid #FFFFFF;
+}
+
+.warning-box {
+    background: #FFD700;
+    border: 2px solid #FF0000;
+    padding: 15px;
+    margin: 15px 0;
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hardware-list {
+    background: #FFFFFF;
+    border: 1px solid #808080;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.hardware-list dt {
+    font-weight: bold;
+    color: #000080;
+    margin-top: 10px;
+}
+
+.hardware-list dd {
+    margin-left: 20px;
+    color: #000000;
+}
+
+.memory-map {
+    font-family: "Lucida Console", Monaco, monospace;
+    background: #000000;
+    color: #00FF00;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00FF00;
+}
+
+.code-block {
+    background: #000000;
+    color: #00FF00;
+    padding: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    border: 1px solid #808080;
+    margin: 10px 0;
+    white-space: pre;
+    overflow-x: auto;
+}
+
 /* Print styles */
 @media print {
     body {
@@ -135,5 +214,15 @@ a:hover {
         color: black;
     }
     
+    .tech-box, .memory-map, .code-block {
+        border: 1px solid black;
+        color: black;
+        background: #FFFFFF;
+    }
 
+    .warning-box {
+        border: 2px solid black;
+        background: #FFFFFF;
+        color: black;
+    }
 }
