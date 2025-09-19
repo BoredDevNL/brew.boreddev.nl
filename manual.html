@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewKernel User Manual</title>
+    <link rel="stylesheet" href="manual.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BrewKernel User Manual</h1>
+        </div>
+
+        <div class="section">
+            <h2>System Overview</h2>
+            <p>Welcome to the BrewKernel, a simple hobby operating system kernel designed
+            for x86_64 architecture. This manual provides an overview of the system,
+            its features, and available commands.</p>
+            
+            <p>BrewKernel boots into a VGA text mode display (80x25 characters). It
+            initializes a custom color palette and provides basic keyboard input
+            handling. The primary user interface is a simple command-line
+            interface (CLI).</p>
+        </div>
+
+        <div class="section">
+            <h2>Features</h2>
+            <ul>
+                <li>VGA Text Mode Driver: Full control over text and background colors.</li>
+                <li>PS/2 Keyboard Driver: Handles key presses, including modifier keys like Shift.</li>
+                <li>Simple CLI: A basic shell to interact with the kernel.</li>
+                <li>Command History (sort of): The last entered command remains in the buffer but is not yet a full history feature.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How to Use the CLI</h2>
+            <p>Upon boot, you can type 'CLI' and press Enter to start the command-line
+            interface. Once in the CLI, you can type commands followed by Enter.
+            Commands are case-insensitive.</p>
+        </div>
+
+        <div class="section">
+            <h2>Available Commands</h2>
+            <table class="commands-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>HELP</td>
+                    <td>Displays a short list of available commands.</td>
+                </tr>
+                <tr>
+                    <td>MAN</td>
+                    <td>Shows this detailed user manual. Use UP/DOWN arrow keys to scroll and 'q' to quit the manual viewer.</td>
+                </tr>
+                <tr>
+                    <td>ABOUT</td>
+                    <td>Displays information about the kernel, including version, build date, architecture, and compiler.</td>
+                </tr>
+                <tr>
+                    <td>MATH</td>
+                    <td>A simple calculator for basic arithmetic operations (add, subtract, multiply, divide) on integers.</td>
+                </tr>
+                <tr>
+                    <td>DATE</td>
+                    <td>Displays the current date and time, with an option to select your timezone.</td>
+                </tr>
+                <tr>
+                    <td>CLEAR</td>
+                    <td>Clears the entire screen and moves the cursor to the top-left.</td>
+                </tr>
+                <tr>
+                    <td>EXIT</td>
+                    <td>Exits the CLI mode and returns to the initial kernel screen.</td>
+                </tr>
+                <tr>
+                    <td>LICENSE</td>
+                    <td>Displays the full GNU General Public License v3. Use UP/DOWN to scroll, 'q' to quit.</td>
+                </tr>
+                <tr>
+                    <td>UPTIME</td>
+                    <td>Shows how long the system has been running since boot.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <img src="asciiart.png" alt="ASCII Art" class="ascii-art">
+            <p>© 2025 BrewKernel - A Hobby Kernel</p>
+        </div>
+    </div>
+</body>
+</html>

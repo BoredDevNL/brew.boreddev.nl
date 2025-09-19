@@ -1,0 +1,139 @@
+body {
+    background-color: #C0C0C0;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    color: #000080;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 2px solid #808080;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #000080;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #000080;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: 2px 2px #C0C0C0;
+    margin: 0 0 15px 0;
+}
+
+.blink-warning {
+    color: #FF0000;
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #808080;
+    background-color: #FFFFFF;
+}
+
+h2 {
+    color: #000080;
+    font-size: 18px;
+    border-bottom: 1px dashed #808080;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: square;
+    color: #000080;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.commands-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #808080;
+    margin: 15px 0;
+}
+
+.commands-table th {
+    background-color: #000080;
+    color: #FFFFFF;
+    padding: 8px;
+    text-align: left;
+}
+
+.commands-table td {
+    padding: 8px;
+    border: 1px solid #808080;
+}
+
+.commands-table tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #000080;
+}
+
+.ascii-art {
+    max-width: 200px;
+    margin: 20px auto;
+    image-rendering: pixelated;
+}
+
+.counter {
+    font-family: "Digital", "Courier New", monospace;
+    background-color: #000000;
+    color: #00FF00;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #808080;
+    margin-top: 10px;
+}
+
+/* Beveled borders for that classic 90s look */
+.section, .commands-table {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+}
+
+/* Links styling */
+a {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+
+a:hover {
+    background-color: #FFFF00;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+
+}
