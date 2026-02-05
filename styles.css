@@ -471,11 +471,7 @@ pre[class*="language-"] {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-#prerequisites,
-#building,
-#running {
-    padding-bottom: 0;
-}
+
 
 @media (max-width: 768px) {
     .hero h1 {
