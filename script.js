@@ -30,7 +30,7 @@ observeElements.forEach(element => {
     observer.observe(element);
 });
 
-const text = "Brew Kernel";
+const text = "BrewOS";
 const typewriterElement = document.getElementById('typewriter');
 const cursorElement = document.querySelector('.cursor');
 let i = 0;

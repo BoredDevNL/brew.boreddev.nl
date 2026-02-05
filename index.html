@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Kernel - A Simple x86_64 Kernel</title>
+    <title>Brew OS 1.12 Alpha</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,10 +21,12 @@
         <div class="container">
             <img src="asciiart.png" alt="Brew Kernel ASCII Art" class="hero-image">
             <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
-            <p class="subtitle">A X86_64 kernel from scratch made by just one person.</p>
+            
+
+
             <div class="cta-buttons">
                 <a href="#features" class="button primary"><i class="fas fa-coffee fa-sm"></i>&nbsp; Learn More</a>
-                <a href="https://github.com/boreddevhq/brew-kernel" class="button secondary"><i class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
+                <a href="https://github.com/boreddevnl/brewos" class="button secondary"><i class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -34,168 +36,165 @@
     </div>
 
     <main class="container">
+        <!-- FEATURES SECTION (PRESERVED) -->
         <section id="features" class="features">
             <h2>Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>64-bit Support</h3>
-                    <p>Full long mode support with multiboot2 compliance</p>
+                    <h3>Brew DE</h3>
+                    <p>Windows 3.1 UI Inspired Desktop Environment.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-palette"></i></div>
-                    <h3>VGA Text Mode</h3>
-                    <p>Custom driver with 16-color palette support</p>
+                    <h3>Network Stack</h3>
+                    <p>A fully working network stack.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Interrupt Handling</h3>
-                    <p>Basic IDT implementation with essential handlers</p>
+                    <p>Basic IDT implementation with essential handlers.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Hardware Ready</h3>
-                    <p>Runs on actual x86_64 hardware</p>
+                    <h3>FAT32 File System</h3>
+                    <p>Memory based FAT32 file system.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>Simple CLI</h3>
-                    <p>A basic shell to interact with the kernel.</p>
+                    <h3>CLI</h3>
+                    <p>A shell to interact with the kernel.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-keyboard"></i></div>
-                    <h3>PS/2 Keyboard Driver</h3>
-                    <p>Handles key presses, including modifier keys like Shift.</p>
+                    <h3>PS/2 Keyboard/Mouse Driver</h3>
+                    <p>Handles key presses and mouse movements.</p>
                 </div>
             </div>
         </section>
 
+        <!-- CLI SECTION (PRESERVED) -->
         <section id="cli" class="technical">
             <h2>Command-Line Interface (CLI)</h2>
             <div class="tech-grid">
                 <div class="tech-card">
                     <h3>How to Use</h3>
-                    <p>Upon boot, you can type 'CLI' and press Enter to start the command-line interface. Once in the CLI, you can type commands followed by Enter. Commands are case-insensitive.</p>
+                    <p>Upon boot, you will be greeted with the BrewOS desktop, under the "BrewOS" menu in the bottom left you can click on applications and run them.</p>
                 </div>
             </div>
-            <h3>Available Commands</h3>
+            <h3>Handy Tools</h3>
             <div class="tech-grid">
                 <div class="tech-card">
                     <h4>HELP</h4>
-                    <p>Displays a short list of available commands.</p>
+                    <p>A cmd command allowing you to see a short list of available commands.</p>
                 </div>
                 <div class="tech-card">
-                    <h4>MAN</h4>
-                    <p>Shows this detailed user manual. Use UP/DOWN arrow keys to scroll and 'q' to quit the manual viewer.</p>
+                    <h4>Explorer</h4>
+                    <p>Allows the user to navigate the file system.</p>
                 </div>
                 <div class="tech-card">
-                    <h4>ABOUT</h4>
-                    <p>Displays information about the kernel, including version, build date, architecture, and compiler.</p>
+                    <h4>About</h4>
+                    <p>Displays brewkernel and BrewOS version number.</p>
                 </div>
                 <div class="tech-card">
-                    <h4>MATH</h4>
+                    <h4>Calculator</h4>
                     <p>A simple calculator for basic arithmetic operations (add, subtract, multiply, divide) on integers.</p>
                 </div>
+
                 <div class="tech-card">
-                    <h4>CLEAR</h4>
-                    <p>Clears the entire screen and moves the cursor to the top-left.</p>
+                    <h4>Notepad</h4>
+                    <p>Allows you to jot down some notes!</p>
                 </div>
                 <div class="tech-card">
-                    <h4>EXIT</h4>
-                    <p>Exits the CLI mode and returns to the initial kernel screen.</p>
-                </div>
-                <div class="tech-card">
-                    <h4>LICENSE</h4>
-                    <p>Displays the full GNU General Public License v3, under which BrewKernel is distributed. Use UP/DOWN to scroll, 'q' to quit.</p>
+                    <h4>Control panel</h4>
+                    <p>Allows you to graphically change certain settings.</p>
                 </div>
             </div>
         </section>
 
-        <section id="quick-start" class="quick-start">
-            <h2>Quick Start</h2>
-            <div class="code-block">
-                <pre><code class="language-bash"># Build the Docker environment
-cd buildenv
-docker build -t brewkernel-buildenv .
+        <!-- NEW SECTIONS START HERE -->
 
-# Build the kernel
-cd ..
-docker run --rm -it -v "$(pwd)":/root/env --platform linux/amd64 voidkernel make build-x86_64</code></pre>
+        <section id="prerequisites" class="technical">
+            <h2>Prerequisites</h2>
+            <p>To build BrewOS, you'll need the following tools installed:</p>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Required Tools</h3>
+                    <ul>
+                        <li><strong>x86_64 ELF Toolchain</strong>: <code>x86_64-elf-gcc</code>, <code>x86_64-elf-ld</code></li>
+                        <li><strong>NASM</strong>: Netwide Assembler for compiling assembly code</li>
+                        <li><strong>xorriso</strong>: For creating bootable ISO images</li>
+                        <li><strong>QEMU</strong> (optional): For testing the kernel in an emulator</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>macOS Installation</h3>
+                    <div class="code-block">
+                        <pre><code class="language-bash">brew install x86_64-elf-binutils x86_64-elf-gcc nasm xorriso qemu</code></pre>
+                    </div>
+                </div>
             </div>
-            <p class="note">This will create a bootable ISO at <code>dist/x86_64/kernel.iso</code></p>
+        </section>
+
+        <section id="building" class="technical">
+            <h2>Building</h2>
+            <p>Simply run <code>make</code> from the project root:</p>
+            <div class="code-block">
+                <pre><code class="language-bash">make</code></pre>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Build Process</h3>
+                    <ol>
+                        <li>Compile all kernel C sources and assembly files</li>
+                        <li>Link the kernel ELF binary</li>
+                        <li>Generate a bootable ISO image (<code>brewos.iso</code>)</li>
+                    </ol>
+                </div>
+                <div class="tech-card">
+                    <h3>Build Output</h3>
+                    <ul>
+                        <li>Compiled object files: <code>build/</code></li>
+                        <li>ISO root filesystem: <code>iso_root/</code></li>
+                        <li>Final ISO image: <code>brewos.iso</code></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="running" class="technical">
-            <h2>Running Brew Kernel</h2>
+            <h2>Running</h2>
             <div class="tech-grid">
                 <div class="tech-card">
-                    <h3>VM Installation</h3>
-                    <ul>
-                        <li>Run with QEMU: <code>qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</code></li>
-                        <li>If you were to use VirtualBox for example, make sure you use a VGA display and the recommended ram would be around 24mb (as long as it is higher than the size of the ISO file)</li>
-                    </ul>
+                    <h3>QEMU Emulation</h3>
+                    <p>Run the kernel in QEMU:</p>
+                    <div class="code-block">
+                        <pre><code class="language-bash">make run</code></pre>
+                    </div>
+                    <p>Or manually:</p>
+                    <div class="code-block">
+                        <pre><code class="language-bash">qemu-system-x86_64 -m 2G -serial stdio -cdrom brewos.iso -boot d</code></pre>
+                    </div>
                 </div>
                 <div class="tech-card">
-                    <h3>Hardware Installation</h3>
-                    <ul>
-                        <li>Install BalenaEtcher on your device</li>
-                        <li>Flash kernel.iso to a USB drive</li>
-                        <li>Enable legacy boot in BIOS</li>
-                        <li>Boot using legacy option (not UEFI)</li>
-                        <li>Connect display via VGA port only</li>
-                    </ul>
+                    <h3>Running on Real Hardware</h3>
+                    <p style="color: #ff6b6b;"><em>Warning: This is at YOUR OWN RISK. This software comes with ZERO warranty and may break your system.</em></p>
+                    <ol>
+                        <li><strong>Create bootable USB</strong>: Use <a href="https://www.balena.io/etcher/" target="_blank">Balena Etcher</a> to flash <code>brewos.iso</code> to a USB drive</li>
+                        <li><strong>Prepare the system</strong>:
+                            <ul>
+                               <li>Enable legacy (BIOS) boot in your system BIOS/UEFI settings</li>
+                               <li>Disable Secure Boot if needed</li>
+                            </ul>
+                        </li>
+                        <li><strong>Boot</strong>: Insert the USB drive and select it in the boot menu during startup</li>
+                    </ol>
                 </div>
                 <div class="tech-card">
                     <h3>Tested Hardware</h3>
                     <ul>
-                        <li>HP EliteDesk 705 G4 DM 65W SBKPF</li>
-                        <li>AMD Ryzen 5 PRO 2400G</li>
-                        <li>AMD ATI Radeon Vega Series (VGA only)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="warning">
-                <p><strong>Important:</strong> Running on actual hardware is not recommended. This software comes with NO warranty and is used at YOUR OWN RISK.</p>
-            </div>
-        </section>
-
-        <section id="technical" class="technical">
-            <h2>Technical Details</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>Memory Map</h3>
-                    <ul>
-                        <li>Kernel loaded at 1MB (0x100000)</li>
-                        <li>16KB Stack size</li>
-                        <li>Identity-mapped page tables</li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>VGA Output</h3>
-                    <ul>
-                        <li>80x25 character resolution</li>
-                        <li>16-color palette support</li>
-                        <li>Memory mapped at 0xB8000</li>
-                        <li>Text mode with customizable colors</li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>Integer Support</h3>
-                    <ul>
-                        <li>Signed integer printing with negative handling</li>
-                        <li>Unsigned integer printing</li>
-                        <li>Base-10 (decimal) output format</li>
-                        <li>Automatic buffer management</li>
-                        <li>Numbers automatically wrapped at screen boundaries</li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>Interrupt Handlers</h3>
-                    <ul>
-                        <li>Division by Zero (Vector 0)</li>
-                        <li>Debug Exception (Vector 1)</li>
-                        <li>Page Fault (Vector 14)</li>
-                        <li>Basic IDT implementation</li>
+                        <li>HP EliteDesk 705 G4 DM (AMD Ryzen 5 PRO 2400G, Radeon Vega)</li>
+                        <li>Lenovo ThinkPad A475 20KL002VMH (AMD Pro A12-8830B, Radeon R7)</li>
                     </ul>
                 </div>
             </div>
@@ -204,37 +203,20 @@ docker run --rm -it -v "$(pwd)":/root/env --platform linux/amd64 voidkernel make
         <section id="project-structure" class="technical">
             <h2>Project Structure</h2>
             <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>Directory Layout</h3>
+                <div class="tech-card" style="width: 100%;">
                     <ul>
-                        <li>src/impl/kernel/ - Main kernel implementation</li>
-                        <li>src/impl/x86_64/ - Architecture-specific code</li>
-                        <li>src/intf/ - Header files and interfaces</li>
-                        <li>targets/ - Target-specific files</li>
-                        <li>buildenv/ - Docker build environment</li>
-                        <li>dist/ - Build output directory</li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>Build Outputs</h3>
-                    <ul>
-                        <li>Kernel binary: <code>dist/x86_64/kernel.bin</code></li>
-                        <li>Bootable ISO: <code>dist/x86_64/kernel.iso</code></li>
-                        <li>Multiboot2 compliant bootloader</li>
-                        <li>Custom linker scripts in targets/ directory</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="prerequisites" class="technical">
-            <h2>Prerequisites</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>Development Tools</h3>
-                    <ul>
-                        <li>Docker (for containerized build environment)</li>
-                        <li>QEMU (To test in Virtual Enviroments)</li>
+                        <li><code>src/kernel/</code> - Main kernel implementation
+                                <li><code>boot.asm</code> - Boot assembly code</li>
+                                <li><code>main.c</code> - Kernel entry point</li>
+                                <li><code>*.c / *.h</code> - Core kernel modules (graphics, interrupts, filesystem, etc.)</li>
+                                <li><code>cli_apps/</code> - Command-line applications</li>
+                                <li><code>wallpaper.ppm</code> - Default desktop wallpaper</li>
+                        <li><code>build/</code> - Compiled object files (generated during build)</li>
+                        <li><code>iso_root/</code> - ISO filesystem layout (generated during build)</li>
+                        <li><code>limine/</code> - Limine bootloader files (downloaded automatically)</li>
+                        <li><code>linker.ld</code> - Linker script for x86_64 ELF</li>
+                        <li><code>limine.cfg</code> - Limine bootloader configuration</li>
+                        <li><code>Makefile</code> - Build configuration and targets</li>
                     </ul>
                 </div>
             </div>
@@ -242,16 +224,40 @@ docker run --rm -it -v "$(pwd)":/root/env --platform linux/amd64 voidkernel make
 
         <section id="support" class="support">
             <h2>Help me brew some coffee! ☕️</h2>
-            <p>If you enjoy this project and like what I'm doing here, consider buying me a coffee!</p>
-            <a href="https://buymeacoffee.com/boreddevhq" target="_blank" class="coffee-button">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
+            <p>If you enjoy this project, and like what i'm doing here, consider buying me a coffee!</p>
+            <br><br>
+            <a href="https://buymeacoffee.com/boreddevnl" target="_blank" class="coffee-button">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" style="border-radius: 8px;">
             </a>
         </section>
+
+        <section id="license" class="technical">
+            <h2>License</h2>
+            <p>Copyright (C) 2024-2026 boreddevnl</p>
+            <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+            
+            <div class="tech-grid" style="margin-top: 2rem;">
+                <div class="tech-card" style="width: 100%;">
+                    <h3>NOTICE</h3>
+                    <p>This product includes software developed by Chris ("boreddevnl") as part of the Brewkernel/BrewOS project.</p>
+                    <p>Copyright (C) 2024–2026 Chris / boreddevnl (previously boreddevhq)</p>
+                    <p>All source files in this repository contain copyright and license headers that must be preserved in redistributions and derivative works.</p>
+                    <p>If you distribute or modify this project (in whole or in part), you MUST:</p>
+                    <ul>
+                        <li>Retain all copyright and license headers at the top of each file.</li>
+                        <li>Include this NOTICE file along with any redistributions or derivative works.</li>
+                        <li>Provide clear attribution to the original author in documentation or credits where appropriate.</li>
+                    </ul>
+                    <p>The above attribution requirements are informational and intended to ensure proper credit is given. They do not alter or supersede the terms of the GNU General Public License (GPL), which governs this work.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>Copyright © 2024-2025 boreddevhq - Licensed under GPL v3</p>
+            <p>Copyright © 2024-2026 boreddevnl - Licensed under GPL v3</p>
         </div>
     </footer>
 
