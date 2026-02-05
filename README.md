@@ -1,1 +1,1 @@
-# either follow the instructions below, or follow the [user manual](https://brew.boreddev.nl/manual.html)
+
