@@ -30,7 +30,7 @@ observeElements.forEach(element => {
     observer.observe(element);
 });
 
-const text = "BrewOS";
+const text = "BoredOS";
 const typewriterElement = document.getElementById('typewriter');
 const cursorElement = document.querySelector('.cursor');
 let i = 0;

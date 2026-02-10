@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrewOS</title>
+    <title>BoredOS</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,14 +19,14 @@
 
     <div class="hero">
         <div class="container">
-            <img src="asciiart.png" alt="Brew Kernel ASCII Art" class="hero-image">
+            <img src="bored.svg" alt="BoredOS ASCII Art" class="hero-image">
             <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
             
 
 
             <div class="cta-buttons">
                 <a href="#features" class="button primary"><i class="fas fa-coffee fa-sm"></i>&nbsp; Learn More</a>
-                <a href="https://github.com/boreddevnl/brewos" class="button secondary"><i class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
+                <a href="https://github.com/boreddevnl/boredos" class="button secondary"><i class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -42,7 +42,7 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Brew DE</h3>
+                    <h3>Bored DE</h3>
                     <p>Windows 3.1 UI Inspired Desktop Environment.</p>
                 </div>
                 <div class="feature-card">
@@ -79,7 +79,7 @@
             <div class="tech-grid">
                 <div class="tech-card">
                     <h3>How to Use</h3>
-                    <p>Upon boot, you will be greeted with the BrewOS desktop, under the "BrewOS" menu in the bottom left you can click on applications and run them.</p>
+                    <p>Upon boot, you will be greeted with the BoredOS desktop, under the "BoredOS" menu in the bottom left you can click on applications and run them.</p>
                 </div>
             </div>
             <h3>Handy Tools</h3>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="tech-card">
                     <h4>About</h4>
-                    <p>Displays brewkernel and BrewOS version number.</p>
+                    <p>Displays Boredkernel and BoredOS version number.</p>
                 </div>
                 <div class="tech-card">
                     <h4>Calculator</h4>
@@ -116,7 +116,7 @@
 
         <section id="prerequisites" class="technical">
             <h2>Prerequisites</h2>
-            <p>To build BrewOS, you'll need the following tools installed:</p>
+            <p>To build BoredOS, you'll need the following tools installed:</p>
             <div class="tech-grid">
                 <div class="tech-card">
                     <h3>Required Tools</h3>
@@ -148,7 +148,7 @@
                     <ol>
                         <li>Compile all kernel C sources and assembly files</li>
                         <li>Link the kernel ELF binary</li>
-                        <li>Generate a bootable ISO image (<code>brewos.iso</code>)</li>
+                        <li>Generate a bootable ISO image (<code>boredos.iso</code>)</li>
                     </ol>
                 </div>
                 <div class="tech-card">
@@ -156,7 +156,7 @@
                     <ul>
                         <li>Compiled object files: <code>build/</code></li>
                         <li>ISO root filesystem: <code>iso_root/</code></li>
-                        <li>Final ISO image: <code>brewos.iso</code></li>
+                        <li>Final ISO image: <code>boredos.iso</code></li>
                     </ul>
                 </div>
             </div>
@@ -173,14 +173,14 @@
                     </div>
                     <p>Or manually:</p>
                     <div class="code-block">
-                        <pre><code class="language-bash">qemu-system-x86_64 -m 2G -serial stdio -cdrom brewos.iso -boot d</code></pre>
+                        <pre><code class="language-bash">qemu-system-x86_64 -m 2G -serial stdio -cdrom boredos.iso -boot d</code></pre>
                     </div>
                 </div>
                 <div class="tech-card">
                     <h3>Running on Real Hardware</h3>
                     <p style="color: #ff6b6b;"><em>Warning: This is at YOUR OWN RISK. This software comes with ZERO warranty and may break your system.</em></p>
                     <ol>
-                        <li><strong>Create bootable USB</strong>: Use <a href="https://www.balena.io/etcher/" target="_blank">Balena Etcher</a> to flash <code>brewos.iso</code> to a USB drive</li>
+                        <li><strong>Create bootable USB</strong>: Use <a href="https://www.balena.io/etcher/" target="_blank">Balena Etcher</a> to flash <code>boredos.iso</code> to a USB drive</li>
                         <li><strong>Prepare the system</strong>:
                             <ul>
                                <li>Enable legacy (BIOS) boot in your system BIOS/UEFI settings</li>
@@ -239,7 +239,7 @@
             <div class="tech-grid" style="margin-top: 2rem;">
                 <div class="tech-card" style="width: 100%;">
                     <h3>NOTICE</h3>
-                    <p>This product includes software developed by Chris ("boreddevnl") as part of the Brewkernel/BrewOS project.</p>
+                    <p>This product includes software developed by Chris ("boreddevnl") as part of the Boredkernel/BoredOS project.</p>
                     <p>Copyright (C) 2024–2026 Chris / boreddevnl (previously boreddevhq)</p>
                     <p>All source files in this repository contain copyright and license headers that must be preserved in redistributions and derivative works.</p>
                     <p>If you distribute or modify this project (in whole or in part), you MUST:</p>
