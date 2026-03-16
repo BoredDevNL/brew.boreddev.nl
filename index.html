@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <a href="https://boreddev.nl" class="back-button" aria-label="Back to BoredDev">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -21,54 +24,66 @@
         <div class="container">
             <img src="bored.svg" alt="BoredOS ASCII Art" class="hero-image">
             <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
-            
+
 
 
             <div class="cta-buttons">
                 <a href="#features" class="button primary"><i class="fas fa-coffee fa-sm"></i>&nbsp; Learn More</a>
-                <a href="https://github.com/boreddevnl/boredos" class="button secondary"><i class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
+                <a href="https://github.com/boreddevnl/boredos" class="button secondary"><i
+                        class="fab fa-github fa-sm"></i>&nbsp; View on GitHub</a>
             </div>
         </div>
         <div class="scroll-indicator">
             <div class="text">Scroll Down</div>
             <div class="icon"></div>
-          </div>
+        </div>
     </div>
 
     <main class="container">
+        <section class="screenshot-section">
+            <img src="screenshot.jpg" alt="BoredOS Desktop Screenshot" class="desktop-screenshot">
+            <p class="screenshot-caption"><em>Note: this screenshot might be slightly outdated</em></p>
+        </section>
+
         <!-- FEATURES SECTION (PRESERVED) -->
         <section id="features" class="features">
             <h2>Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Bored DE</h3>
-                    <p>Windows 3.1 UI Inspired Desktop Environment.</p>
+                    <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Bored WM and DE</h3>
+                    <p>MacOS UI Inspired Desktop Environment. Mouse-centered drag and drop UI with customizable
+                        settings.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                    <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
                     <h3>Network Stack</h3>
-                    <p>A fully working network stack.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Interrupt Handling</h3>
-                    <p>Basic IDT implementation with essential handlers.</p>
+                    <p>A network stack utilizing lwIP featuring a simple HTML2.0-compatible browser.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-microchip"></i></div>
                     <h3>FAT32 File System</h3>
-                    <p>Memory based FAT32 file system.</p>
+                    <p>Memory based FAT32 file system with support for FAT32 ATA drives.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>CLI</h3>
-                    <p>A shell to interact with the kernel.</p>
+                    <h3>CLI & Userspace</h3>
+                    <p>A shell to interact with the kernel. Includes a (Limited) C Compiler.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-keyboard"></i></div>
-                    <h3>PS/2 Keyboard/Mouse Driver</h3>
-                    <p>Handles key presses and mouse movements.</p>
+                    <div class="feature-icon"><i class="fas fa-file-image"></i></div>
+                    <h3>Image & Text Rendering</h3>
+                    <p>JPG image support, Markdown Viewer, and GUI Text Editor.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Applications</h3>
+                    <p>Paint application, Minesweeper, and more!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-server"></i></div>
+                    <h3>Hardware Support</h3>
+                    <p>64-bit long mode support. Multiboot2 compliant. Runs on actual x86_64 hardware.</p>
                 </div>
             </div>
         </section>
@@ -79,7 +94,9 @@
             <div class="tech-grid">
                 <div class="tech-card">
                     <h3>How to Use</h3>
-                    <p>Upon boot, you will be greeted with the BoredOS desktop, under the "BoredOS" menu in the bottom left you can click on applications and run them.</p>
+                    <p>Upon boot, you will be greeted with the BoredOS desktop, at the top there is a menu bar. Click
+                        the BoredOS logo to open system information and more, on the bottom there is a Dock with
+                        applications to launch.</p>
                 </div>
             </div>
             <h3>Handy Tools</h3>
@@ -98,7 +115,8 @@
                 </div>
                 <div class="tech-card">
                     <h4>Calculator</h4>
-                    <p>A simple calculator for basic arithmetic operations (add, subtract, multiply, divide) on integers.</p>
+                    <p>A simple calculator for basic arithmetic operations (add, subtract, multiply, divide) on
+                        integers.</p>
                 </div>
 
                 <div class="tech-card">
@@ -106,149 +124,71 @@
                     <p>Allows you to jot down some notes!</p>
                 </div>
                 <div class="tech-card">
-                    <h4>Control panel</h4>
+                    <h4>Settings</h4>
                     <p>Allows you to graphically change certain settings.</p>
                 </div>
             </div>
         </section>
 
-        <!-- NEW SECTIONS START HERE -->
 
-        <section id="prerequisites" class="technical">
-            <h2>Prerequisites</h2>
-            <p>To build BoredOS, you'll need the following tools installed:</p>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>Required Tools</h3>
-                    <ul>
-                        <li><strong>x86_64 ELF Toolchain</strong>: <code>x86_64-elf-gcc</code>, <code>x86_64-elf-ld</code></li>
-                        <li><strong>NASM</strong>: Netwide Assembler for compiling assembly code</li>
-                        <li><strong>xorriso</strong>: For creating bootable ISO images</li>
-                        <li><strong>QEMU</strong> (optional): For testing the kernel in an emulator</li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>macOS Installation</h3>
-                    <div class="code-block">
-                        <pre><code class="language-bash">brew install x86_64-elf-binutils x86_64-elf-gcc nasm xorriso qemu</code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="building" class="technical">
-            <h2>Building</h2>
-            <p>Simply run <code>make</code> from the project root:</p>
-            <div class="code-block">
-                <pre><code class="language-bash">make</code></pre>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>Build Process</h3>
-                    <ol>
-                        <li>Compile all kernel C sources and assembly files</li>
-                        <li>Link the kernel ELF binary</li>
-                        <li>Generate a bootable ISO image (<code>boredos.iso</code>)</li>
-                    </ol>
-                </div>
-                <div class="tech-card">
-                    <h3>Build Output</h3>
-                    <ul>
-                        <li>Compiled object files: <code>build/</code></li>
-                        <li>ISO root filesystem: <code>iso_root/</code></li>
-                        <li>Final ISO image: <code>boredos.iso</code></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="running" class="technical">
-            <h2>Running</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>QEMU Emulation</h3>
-                    <p>Run the kernel in QEMU:</p>
-                    <div class="code-block">
-                        <pre><code class="language-bash">make run</code></pre>
-                    </div>
-                    <p>Or manually:</p>
-                    <div class="code-block">
-                        <pre><code class="language-bash">qemu-system-x86_64 -m 2G -serial stdio -cdrom boredos.iso -boot d</code></pre>
-                    </div>
-                </div>
-                <div class="tech-card">
-                    <h3>Running on Real Hardware</h3>
-                    <p style="color: #ff6b6b;"><em>Warning: This is at YOUR OWN RISK. This software comes with ZERO warranty and may break your system.</em></p>
-                    <ol>
-                        <li><strong>Create bootable USB</strong>: Use <a href="https://www.balena.io/etcher/" target="_blank">Balena Etcher</a> to flash <code>boredos.iso</code> to a USB drive</li>
-                        <li><strong>Prepare the system</strong>:
-                            <ul>
-                               <li>Enable legacy (BIOS) boot in your system BIOS/UEFI settings</li>
-                               <li>Disable Secure Boot if needed</li>
-                            </ul>
-                        </li>
-                        <li><strong>Boot</strong>: Insert the USB drive and select it in the boot menu during startup</li>
-                    </ol>
-                </div>
-                <div class="tech-card">
-                    <h3>Tested Hardware</h3>
-                    <ul>
-                        <li>HP EliteDesk 705 G4 DM (AMD Ryzen 5 PRO 2400G, Radeon Vega)</li>
-                        <li>Lenovo ThinkPad A475 20KL002VMH (AMD Pro A12-8830B, Radeon R7)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="project-structure" class="technical">
-            <h2>Project Structure</h2>
+        <section id="docs" class="technical">
+            <h2>Documentation</h2>
             <div class="tech-grid">
                 <div class="tech-card" style="width: 100%;">
+                    <h3>Comprehensive Docs</h3>
+                    <p>BoredOS includes an extensive <code>docs/</code> directory covering architecture, the build
+                        system, and application development SDKs.</p>
                     <ul>
-                        <li><code>src/kernel/</code> - Main kernel implementation
-                                <li><code>boot.asm</code> - Boot assembly code</li>
-                                <li><code>main.c</code> - Kernel entry point</li>
-                                <li><code>*.c / *.h</code> - Core kernel modules (graphics, interrupts, filesystem, etc.)</li>
-                                <li><code>cli_apps/</code> - Command-line applications</li>
-                                <li><code>wallpaper.ppm</code> - Default desktop wallpaper</li>
-                        <li><code>build/</code> - Compiled object files (generated during build)</li>
-                        <li><code>iso_root/</code> - ISO filesystem layout (generated during build)</li>
-                        <li><code>limine/</code> - Limine bootloader files (downloaded automatically)</li>
-                        <li><code>linker.ld</code> - Linker script for x86_64 ELF</li>
-                        <li><code>limine.cfg</code> - Limine bootloader configuration</li>
-                        <li><code>Makefile</code> - Build configuration and targets</li>
+                        <li><a href="https://github.com/boreddevnl/boredos/blob/main/docs/README.md"
+                                style="color: var(--primary);">Index / Table of Contents</a></li>
+                        <li><a href="https://github.com/boreddevnl/boredos/blob/main/docs/architecture/core.md"
+                                style="color: var(--primary);">Architecture Overview</a></li>
+                        <li><a href="https://github.com/boreddevnl/boredos/blob/main/docs/build/usage.md"
+                                style="color: var(--primary);">Building and Running</a></li>
+                        <li><a href="https://github.com/boreddevnl/boredos/blob/main/docs/appdev/custom_apps.md"
+                                style="color: var(--primary);">Application Development Guide</a></li>
                     </ul>
                 </div>
             </div>
         </section>
+
+
 
         <section id="support" class="support">
             <h2>Help me brew some coffee! ☕️</h2>
             <p>If you enjoy this project, and like what i'm doing here, consider buying me a coffee!</p>
             <br><br>
             <a href="https://buymeacoffee.com/boreddevnl" target="_blank" class="coffee-button">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" style="border-radius: 8px;">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50"
+                    style="border-radius: 8px;">
             </a>
         </section>
 
         <section id="license" class="technical">
             <h2>License</h2>
             <p>Copyright (C) 2024-2026 boreddevnl</p>
-            <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-            
+            <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+                General Public License as published by the Free Software Foundation, either version 3 of the License, or
+                (at your option) any later version.</p>
+
             <div class="tech-grid" style="margin-top: 2rem;">
                 <div class="tech-card" style="width: 100%;">
                     <h3>NOTICE</h3>
-                    <p>This product includes software developed by Chris ("boreddevnl") as part of the Boredkernel/BoredOS project.</p>
+                    <p>This product includes software developed by Chris ("boreddevnl") as part of the
+                        Boredkernel/BoredOS project.</p>
                     <p>Copyright (C) 2024–2026 Chris / boreddevnl (previously boreddevhq)</p>
-                    <p>All source files in this repository contain copyright and license headers that must be preserved in redistributions and derivative works.</p>
+                    <p>All source files in this repository contain copyright and license headers that must be preserved
+                        in redistributions and derivative works.</p>
                     <p>If you distribute or modify this project (in whole or in part), you MUST:</p>
                     <ul>
                         <li>Retain all copyright and license headers at the top of each file.</li>
                         <li>Include this NOTICE file along with any redistributions or derivative works.</li>
-                        <li>Provide clear attribution to the original author in documentation or credits where appropriate.</li>
+                        <li>Provide clear attribution to the original author in documentation or credits where
+                            appropriate.</li>
                     </ul>
-                    <p>The above attribution requirements are informational and intended to ensure proper credit is given. They do not alter or supersede the terms of the GNU General Public License (GPL), which governs this work.</p>
+                    <p>The above attribution requirements are informational and intended to ensure proper credit is
+                        given. They do not alter or supersede the terms of the GNU General Public License (GPL), which
+                        governs this work.</p>
                 </div>
             </div>
         </section>
@@ -265,4 +205,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-bash.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
